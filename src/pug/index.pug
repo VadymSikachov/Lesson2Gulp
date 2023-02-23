@@ -1,0 +1,71 @@
+extends common/layout
+
+block main 
+  main.container
+      section.dreamshare
+        p.dreamshare__text How Dreamshare works?
+        .dreamshare__grid
+          .dreamshare__grid__col
+            input.dreamshare__grid__col_btn(type='button', value='STEP 1')
+            p.dreamshare__grid__col_txt Sed leo enim, condimentum
+            p.dreamshare__grid__col_txtlow
+              | Quisque libero libero, dictum non turpis in, luctus semper
+              | lorem. Donec rhoncus a leo sit amet facilisis.
+          .dreamshare__grid__col
+            input.dreamshare__grid__col_btn(type='button', value='STEP 2')
+            p.dreamshare__grid__col_txt.dreamshare__grid__col_txtmiddle Morbi velit risus
+            p.dreamshare__grid__col_txtlow.txt.dreamshare__grid__col_txtlowmiddle
+              | Nulla venenatis tempor dui in molestie. Nulla quis dictum
+              | purus, sit amet porttitor est.
+          .dreamshare__grid__col
+            input.dreamshare__grid__col_btn(type='button', value='STEP 3')
+            p.dreamshare__grid__col_txt Sed leo enim, condimentum
+            p.dreamshare__grid__col_txtlow
+              | Quisque libero libero, dictum non turpis in, luctus semper
+              | lorem. Donec rhoncus a leo sit amet facilisis.
+      section.partner
+        p.partner__text Meet a partner for your best holiday
+        .partner__person
+          .partner__person__item
+            p.partner__person__item__txttop Bradley Hunter
+            p.partner__person__item__txtlow Based in Chicago. I love playing tennis and loud music.
+          .partner__person__item
+            p.partner__person__item__txttop Marie Bennett
+            p.partner__person__item__txtlow
+              | Currently living in Colorado. Lover of art, languages and
+              | travelling.
+          .partner__person__item
+            p.partner__person__item__txttop.partner__person__item__txttop_dif Diana Wells
+            p.partner__person__item__txtlow.partner__person__item__txtlow_dif
+              | Living in Athens, Greece.
+              | I love black and white classics, chillout music and green tea.
+          .partner__person__item
+            p.partner__person__item__txttop Christopher Pierce
+            p.partner__person__item__txtlow.partner__person__item__txtlow_dif.partner__person__item__txtlow_diftablet
+              | Star Wars fanatic. I have
+              | a persistent enthusiasm to create new things.
+        input.partner_btn(type='button', value='See other partners')
+      section.holiday
+        p.holiday__txt Discover holiday activity ideas
+        .holiday__grid
+          .holiday__grid__col
+            .holiday__grid__col__Sports  
+          .holiday__grid__col
+            .holiday__grid__col__Wellness  
+          .holiday__grid__col
+            .holiday__grid__col__Extreme  
+          .holiday__grid__col
+            .holiday__grid__col__games  
+          .holiday__grid__col
+            .holiday__grid__col__Culture  
+          .holiday__grid__col
+            .holiday__grid__col__Enjomet  
+          .holiday__grid__col
+            .holiday__grid__col__Trevelling  
+      section.crate
+        p.crate__txtbig Crate your holiday activity
+        p.crate__txtlow Hi! What are your holiday interests?
+        .crate__df
+          input.crate__df_input(type='text', placeholder='Enter your insterests')
+          input.crate__df_btn(type='button', value='Search partners')
+  hr

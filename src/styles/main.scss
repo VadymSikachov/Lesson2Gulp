@@ -1,0 +1,1170 @@
+@import './scss/reset';
+@import './scss/fonts';
+@import './scss/mixins';
+@import './scss/value';
+
+
+
+
+.header {
+    width: 1440px;
+    height: 700px;
+    background-image: url('../image/background.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    padding-top: 40px;
+    animation-name: promo;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.17, 1.6, 0.79, 1.03);
+
+    &__menu {
+        width: 65.5%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__logo {
+            color: $main-text-colour;
+            @include text(Montserrat, normal, bold, 20px, 24px);
+
+        }
+
+        &__list {
+
+            @include text(Montserrat, normal, 400, 14px, 36px);
+
+
+            display: flex;
+            align-items: flex-end;
+
+            color: $main-text-colour;
+            margin-right: 42px;
+
+            &__item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 0 0 20px;
+
+                &_active {
+                    width: 90px;
+                    height: 36px;
+                    border: 2px solid $main-text-colour;
+                    border-radius: 40px;
+
+
+                }
+            }
+        }
+    }
+
+    &__text {
+        width: 480px;
+        margin: 147px auto 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__text {
+            @include text(Montserrat, normal, bold, 52px, 63px);
+            text-align: center;
+            color: $main-text-colour;
+            letter-spacing: 0.04em;
+            &_low {
+                @include text(Roboto, normal, 300, 24px, 24px);
+                text-align: center;
+                color: #F7F3F2;
+                margin-top: 29px;
+                
+            }
+
+            &_hide {
+                display: none;
+            }
+        }
+
+        &__button {
+            width: 225px;
+            height: 40px;
+            background: $main-colour-button;
+            border-radius: 40px;
+            @include text(Montserrat, normal, 700, 14px, 17px);
+            text-align: center;
+
+            color: $main-text-colour;
+            margin-top: 35px;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+        }
+    }
+}
+
+.container {
+    width: 941px;
+    margin: 0 auto;
+
+    .dreamshare {
+        padding-top: 88px;
+
+        &__text {
+            @include text(Montserrat, normal, 700, 26px, 32px);
+
+            text-align: center;
+
+            color: #444444;
+
+            letter-spacing: 00.03em;
+        }
+
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 400px 1fr;
+            column-gap: 20px;
+            margin-top: 35px;
+
+            &__col:nth-child(1) {
+                background-image: url('../image/dreamshare/step\ 1\ image.webp');
+
+            }
+
+            &__col:nth-child(2) {
+                background-image: url('../image/dreamshare/step\ 2.webp');
+
+            }
+
+            &__col:nth-child(3) {
+                background-image: url('../image/dreamshare/step\ 3.webp');
+            }
+
+            &__col {
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                padding: 0 25px 21px 25px;
+                transition: all 0.5s;
+                cursor: pointer;
+
+                &_btn {
+                    width: 70px;
+                    height: 20px;
+                    background: $main-colour-button;
+                    border-radius: 40px;
+                    @include text(Montserrat, normal, 400, 10px, 12px);
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    letter-spacing: 2px;
+
+                    color: $main-text-colour;
+                    padding-top: 4px;
+                    cursor: pointer;
+
+                }
+
+                &_txt {
+                    @include text(Montserrat, normal, 700, 24px, 26px);
+
+
+                    display: flex;
+                    align-items: flex-end;
+
+                    color: $main-text-colour;
+                    margin-top: 21px;
+                    letter-spacing: 0.04em;
+                }
+
+                &_txtlow {
+                    @include text(Roboto, normal, 300, 14px, 14px);
+                    display: flex;
+                    align-items: flex-end;
+                    color: #E3E3E3;
+                    margin-top: 25px;
+                    letter-spacing: 0.04em;
+                }
+            }
+
+            &__col:hover {
+                transform: scale(1.01);
+            }
+        }
+    }
+
+    .partner {
+        margin-top: 88px;
+
+        &__text {
+            @include text(Montserrat, normal, 700, 26px, 32px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: $third-text-colour;
+            letter-spacing: 0.03em;
+        }
+
+        &__person {
+            width: 100%;
+            height: 205px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 37px;
+
+            &__item:nth-child(1) {
+                background-image: url('../image/partner/avatar1.webp');
+                background-repeat: no-repeat;
+                background-position-x: center;
+                width: 24%;
+                width: 221px;
+                height: 207px;
+                margin: 0 19px 0 1px;
+            }
+
+            &__item:nth-child(2) {
+                background-image: url('../image/partner/avatar2.webp');
+                background-repeat: no-repeat;
+                background-position-x: center;
+                width: 24%;
+                width: 221px;
+                height: 207px;
+                margin-right: 19px;
+            }
+
+            &__item:nth-child(3) {
+                background-image: url('../image/partner/avatar3.webp');
+                background-repeat: no-repeat;
+                background-position-x: center;
+                width: 24%;
+                width: 221px;
+                height: 226px;
+                margin-right: 18px;
+            }
+
+            &__item:nth-child(4) {
+                background-image: url('../image/partner/avatar4.webp');
+                background-repeat: no-repeat;
+                background-position-x: center;
+                width: 23%;
+                width: 221px;
+                height: 225px;
+            }
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+
+                &__txttop {
+                    display: flex;
+                    align-items: flex-end;
+                    @include text(Montserrat, normal, 700, 14px, 17px);
+                    text-align: center;
+                    color: $third-text-colour;
+                    letter-spacing: 0.03em;
+                }
+
+                &__txtlow {
+                    display: flex;
+                    align-items: flex-end;
+                    @include text(Roboto, normal, 300, 14px, 14px);
+                    text-align: center;
+                    color: #666666;
+                    margin-top: 22px;
+
+                    &_dif {
+                        margin-top: 27px;
+                    }
+                }
+            }
+        }
+
+        &_btn {
+            width: 180px;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 56px;
+            background: $main-text-colour;
+            border: $main-border;
+            border-radius: 40px;
+            @include text(Montserrat, normal, 700, 14px, 17px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $main-colour-button;
+            letter-spacing: 0.01em;
+            padding: 3px 0 0 7px;
+            cursor: pointer;
+        }
+
+
+    }
+
+    .holiday {
+        margin-top: 88px;
+        letter-spacing: 0.03em;
+        &__txt {
+            @include text(Montserrat, normal, 700, 26px, 32px);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+            color: $third-text-colour;
+            
+        }
+
+        &__grid {
+            display: grid;
+            grid-template-columns: 300px 300px 300px;
+            grid-template-rows: 310px 310px 310px;
+            column-gap: 20px;
+            row-gap: 20px;
+            height: 1031px;
+            margin-top: 35px;
+
+            &__col {
+                transition: all 0.2s;
+                cursor: pointer;
+            }
+
+            &__col:hover {
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                transform: scale(1.01);
+            }
+
+            &__col:nth-child(1):after {
+                content: 'Sports and Activis';
+                width: 100%;
+                @extend %holiday-value;
+            }
+
+            &__col:nth-child(2):after {
+                content: 'Wellness and Health';
+                width: 100%;
+                @extend %holiday-value;
+            }
+
+            &__col:nth-child(3):after {
+                content: 'Extreme Sports and Expeditions';
+                width: 70%;
+                left: 60px;
+                @extend %holiday-value;
+
+            }
+
+            &__col:nth-child(4):after {
+                content: 'Games';
+                width: 100%;
+                @extend %holiday-value;
+            }
+
+            &__col:nth-child(5):after {
+                content: 'Culture and Education';
+                width: 100%;
+                @extend %holiday-value;
+
+            }
+
+            &__col:nth-child(6):after {
+                content: 'Enjomet and Relaxation';
+                width: 100%;
+                @extend %holiday-value;
+
+            }
+
+            &__col:nth-child(7):after {
+                content: 'Trevelling';
+                width: 100%;
+                @extend %holiday-value;
+            }
+
+            &__col {
+                background: rgb(3, 3, 3);
+                border-radius: 4px;
+                color: $main-text-colour;
+
+                &__Sports {
+                    background-image: url('../image/holiday/object1.webp');
+                    @extend %holiday-background;
+                }
+
+                &__Wellness {
+                    background-image: url('../image/holiday/object2.webp');
+                    @extend %holiday-background;
+                }
+
+                &__Extreme {
+                    background-image: url('../image/holiday/object3.webp');
+                    @extend %holiday-background;
+                }
+
+                &__games {
+                    background-image: url('../image/holiday/object4.webp');
+                    @extend %holiday-background;
+                }
+
+                &__Culture {
+                    background-image: url('../image/holiday/object5.webp');
+                    @extend %holiday-background;
+                }
+
+                &__Enjomet {
+                    background-image: url('../image/holiday/object6.webp');
+                    @extend %holiday-background;
+                }
+
+                &__Trevelling {
+                    background-image: url('../image/holiday/object7.webp');
+                    @extend %holiday-background;
+                }
+
+                &__txt {
+                    @include text(Montserrat, normal, 700, 22px, 27px);
+                    position: relative;
+                    z-index: 2;
+                    display: flex;
+                    justify-content: center;
+                }
+
+            }
+
+            &__col:nth-child(4) {
+                grid-column: 1 / 2;
+
+            }
+
+            &__col:nth-child(5) {
+                grid-column: 2 / 4;
+            }
+
+            &__col:nth-child(6) {
+                grid-column: 1 / 3;
+            }
+
+            &__col:nth-child(7) {
+                grid-column: 3 / 3;
+            }
+
+
+        }
+
+    }
+
+    .crate {
+        width: 479px;
+        margin: 29px auto;
+
+        &__txtbig {
+            @include text(Montserrat, normal, 700, 26px, 32px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: $third-text-colour;
+        }
+
+        &__txtlow {
+            margin-top: 52px;
+            @include text(Roboto, normal, 300, 18px, 14px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #666666;
+        }
+
+        &__df {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 25px;
+
+            &_input {
+                width: 297px;
+                background: $main-text-colour;
+                border: 1px solid #D4D4D4;
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+                border-radius: 3px;
+                @include text(Roboto, normal, 300, 14px, 16px);
+                color: #999999;
+                padding-left: 11px;
+                padding-top: 5px;
+                letter-spacing: 0.03em;
+            }
+
+            &_btn {
+                width: 173px;
+                height: 40px;
+                background: $main-colour-button;
+                border-radius: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include text(Montserrat, normal, 700, 14px, 17px);
+                letter-spacing: 0.03em;
+                padding: 3px 0 0 4px;
+                color: $main-text-colour;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.foot {
+    margin-top: 100px;
+    border-top: $main-border;
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 29px;
+
+        &__df {
+            width: 544px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding-right: 3px;
+            @include text(Montserrat, normal, 700, 14px, 17px);
+            color: $third-text-colour;
+
+            &__red {
+                margin-top: -2px;
+                @include text(Montserrat, normal, 400, 16px, 20px);
+                color: $main-colour-button;
+            }
+
+            &__list {
+                margin-left: 3px;
+
+                &__bot {
+                    margin-top: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    @include text(Roboto, normal, 300, 14px, 26px);
+                    color: #999999;
+                    letter-spacing: 00.03em;
+                }
+            }
+
+
+        }
+
+        &__logo {
+            margin-top: 10px;
+
+            &__txt {
+                @include text(Montserrat, normal, 700, 10px, 12px);
+                display: flex;
+                align-items: flex-end;
+                letter-spacing: 1px;
+                color: $second-text-colour;
+                flex-direction: row-reverse;
+                letter-spacing: 0.06em;
+                margin-bottom: 6px;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 1439px) {
+    .header {
+        width: 768px;
+
+        &__menu {
+            width: 768px;
+            padding: 0px 9px 0px 50px;
+        }
+
+        &__text {
+            width: 473px;
+
+            &__text_low {
+                letter-spacing: 0;
+            }
+        }
+    }
+
+
+    .container {
+        width: 748px;
+        margin: 0 auto;
+
+        .dreamshare {
+            width: 748px;
+            padding-top: 92px;
+
+            &__text {
+
+                font-size: 22px;
+            }
+
+            &__grid {
+                margin-top: 32px;
+
+                &__col {
+                    padding: 0 21px 15px 20px;
+                    transition: all 0.5s;
+
+                    &_txt {
+                        margin-top: 46px;
+                        line-height: 14px;
+                        letter-spacing: 0.03em;
+                    }
+
+                    &_txtlow {
+                        line-height: 14px;
+                        margin-top: 30px;
+                        letter-spacing: 0;
+                    }
+
+                    &_txtmiddle {
+                        margin-top: 16px;
+                    }
+
+                    &_txtlowmiddle {
+                        line-height: 14px;
+                        margin-top: 24px;
+                    }
+                }
+
+                &__col:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .partner {
+            width: 492px;
+            margin: 0 auto;
+
+            &__text {
+                font-size: 22px;
+                margin-top: 92px;
+            }
+
+            &__person {
+                height: 528px;
+                margin-top: 22px;
+
+                flex-direction: column;
+
+                &__item:nth-child(1) {
+                    width: 233px;
+                    margin-top: 10px;
+                }
+
+                &__item:nth-child(3) {
+                    width: 231px;
+                    margin: 10px 0 0 3px;
+                }
+
+                &__item:nth-child(2) {
+                    width: 231px;
+                    margin: 52px 0 0 2px;
+                }
+
+                &__item:nth-child(4) {
+                    width: 224px;
+                    margin: 33px 0 0 6px;
+                }
+
+                &__item {
+                    &__txtlow {
+                        &_diftablet {
+                            margin: 22px 0 19px 0;
+
+                        }
+                    }
+                }
+            }
+
+            &_btn {
+                margin-top: -14px;
+            }
+        }
+
+        .holiday {
+            margin-top: 92px;
+
+            &__txt {
+                font-size: 22px;
+            }
+
+            &__grid {
+                display: grid;
+                grid-template-columns: 236px 236px 236px;
+                grid-template-rows: 310px 310px 310px;
+                margin-top: 32px;
+
+                &__col {
+                    &__Sports {
+                        background-position-x: -40px;
+                    }
+
+                    &__Wellness {
+                        background-position-x: -40px;
+                    }
+
+                    &__Extreme {
+                        background-position-x: -20px;
+                    }
+
+                    &__games {
+                        background-position-x: -30px;
+                    }
+
+                    &__Culture {
+                        background-position-x: -70px;
+                    }
+
+                    &__Enjoment {
+                        background-position-x: -40px;
+                    }
+
+                    &__Trevelling {
+                        background-image: url('../image/holiday/travelling.webp');
+                    }
+                }
+
+                &__col:nth-child(1)::after {
+                    width: 55%;
+                    left: 53px;
+                    top: -324px;
+                    text-align: center;
+                }
+
+                &__col:nth-child(2)::after {
+                    text-align: center;
+                }
+
+                &__col:nth-child(3)::after {
+                    width: 91%;
+                    left: 11px;
+                    text-align: center;
+                }
+
+            }
+        }
+
+        .crate {
+            margin: 30px auto;
+
+            &__txtbig {
+                font-size: 22px;
+            }
+
+            &__df {
+                margin-top: 24px;
+
+                &_input {
+                    letter-spacing: 0;
+                }
+
+                &_btn {
+                    letter-spacing: 0.02em;
+                }
+            }
+        }
+
+
+    }
+
+    .foot {
+        width: 100%;
+        margin: 100px auto 0;
+
+        &__block {
+            width: 689px;
+            margin: 29px auto;
+
+            &__df {
+                &__list {
+                    margin-left: 50px;
+
+                    &__bot {
+                        letter-spacing: 0;
+                    }
+                }
+
+                &__solo {
+                    margin-right: 83px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 747px) {
+    .header {
+        width: 320px;
+        height: 540px;
+        padding-top: 20px;
+        background-image: url('../image/header/mobile/background.webp');
+        animation-name: promo-mobile;
+        animation-duration: 40s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.17, 1.6, 0.79, 1.03);
+
+        &__menu {
+            width: 320px;
+
+            &__logo {
+                display: none;
+            }
+
+            &__list {
+                padding-left: 14px;
+            }
+        }
+
+        &__text {
+            width: 300px;
+            margin: 97px auto 0;
+
+            &__text {
+                font-size: 30px;
+                line-height: 37px;
+                text-align: center;
+                color: $main-text-colour;
+                margin: 26px 0 0 20px;
+
+                &_hide {
+                    display: block;
+                    @include text(Montserrat, normal, 700, 20px, 24px);
+                    color: $main-text-colour;
+                    margin-left: 20px;
+                }
+
+                &_low {
+                    font-size: 18px;
+                    margin-top: 5px;
+                    margin-left: 21px;
+                }
+
+            }
+
+            &__button {
+                width: 280px;
+                margin: 17px 0 0 21px;
+            }
+        }
+
+    }
+
+    .container {
+        width: 320px;
+
+        .dreamshare {
+            width: 320px;
+            padding-top: 32px;
+
+            &__grid {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 300px;
+                height: 751px;
+                margin-top: 12px;
+                margin-left: 10px;
+                margin: 2px 0 0 10px;
+
+                &__col {
+                    width: 300px;
+                    height: 240px;
+                    margin-top: 10px;
+
+                    &_txtlow {
+                        margin-top: 25px;
+                    }
+
+                    &_txtmiddle {
+                        margin-top: 30px;
+                    }
+
+                    &_txtlowmiddle {
+                        line-height: 14px;
+                        margin-top: 24px;
+
+                    }
+                }
+
+                &__col:nth-child(1) {
+                    background-image: url('../image/dreamShare/mobile/step\ 1\ image.webp');
+                }
+
+                &__col:nth-child(2) {
+                    background-image: url('../image/dreamShare/mobile/step\ 2.webp');
+                }
+
+                &__col:nth-child(3) {
+                    background-image: url('../image/dreamshare/mobile/step\ 3.webp');
+                }
+
+                &__col:hover {
+                    transform: scale(1.01);
+                }
+            }
+        }
+
+        .partner {
+            width: 320px;
+            height: 1033px;
+
+            &__text {
+                line-height: 27px;
+                margin-top: 34px;
+            }
+
+            &__person {
+                width: 236px;
+                height: 826px;
+                flex-direction: row;
+                margin: 14px auto;
+
+                &__item:nth-child(1) {
+                    height: 205px;
+                    margin: 0 auto;
+                    order: 1;
+                }
+
+                &__item:nth-child(2) {
+                    height: 205px;
+                    margin: 15px auto 0;
+                    order: 3;
+
+                }
+
+                &__item:nth-child(3) {
+                    height: 226px;
+                    ;
+                    margin: 17px auto 0;
+                    order: 2;
+                }
+
+                &__item:nth-child(4) {
+                    height: 226px;
+                    margin: 15px auto 0;
+                    order: 4;
+                }
+            }
+
+            &_btn {
+                width: 280px;
+                margin-top: 98px;
+            }
+        }
+
+        .holiday {
+            width: 320px;
+            margin-top: 32px;
+
+            &__txt {
+                width: 273px;
+                margin: 0 auto;
+                line-height: 27px;
+            }
+
+            &__grid {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                width: 320px;
+                height: 900px;
+                margin-top: 24px;
+                margin-top: 40px;
+
+                &__col {
+                    width: 300px;
+                    height: 120px;
+                    margin-top: -10px;
+
+                    &__Sports {
+                        background-image: url('../image/holiday/mobile/object1.webp');
+                        background-position-x: 0px;
+                    }
+
+                    &__Wellness {
+                        background-image: url('../image/holiday/mobile/healath.webp');
+                        background-position-x: 0px;
+                    }
+
+                    &__Extreme {
+                        background-image: url('../image/holiday/mobile/extreme.webp');
+                        background-position-x: 0px;
+                    }
+
+                    &__games {
+                        background-image: url('../image/holiday/mobile/games.webp');
+                        background-position-x: 0px;
+                    }
+
+                    &__Culture {
+                        background-image: url('../image/holiday/mobile/culture.webp');
+                        background-position-x: 0px;
+                    }
+
+                    &__Enjomet {
+                        background-image: url('../image/holiday/mobile/enjoment.webp');
+                        background-position-x: 0px;
+                    }
+
+                    &__Trevelling {
+                        background-image: url('../image/holiday/mobile/trevelling.webp');
+                        background-position-x: 0px;
+                    }
+                }
+
+                &__col:nth-child(1)::after {
+                    width: 69%;
+                    left: 47px;
+                    top: -132px;
+                    text-align: center;
+                }
+
+                &__col:nth-child(2)::after {
+                    width: 69%;
+                    left: 47px;
+                    top: -120px;
+                    ;
+                    text-align: center;
+                }
+
+                &__col:nth-child(3)::after {
+                    width: 69%;
+                    left: 47px;
+                    top: -120px;
+                    text-align: center;
+                }
+
+                &__col:nth-child(4)::after {
+                    width: 69%;
+                    left: 47px;
+                    top: -120px;
+                    text-align: center;
+                }
+
+                &__col:nth-child(5)::after {
+                    width: 69%;
+                    left: 47px;
+                    top: -120px;
+                    text-align: center;
+                }
+
+                &__col:nth-child(6)::after {
+                    width: 100%;
+                    left: 0px;
+                    top: -120px;
+                    text-align: center;
+                }
+
+                &__col:nth-child(7)::after {
+                    width: 69%;
+                    left: 47px;
+                    top: -120px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .crate {
+            margin: 29px auto;
+            width: 320px;
+
+            &__txtbig {
+                width: 80%;
+                margin: 0 auto;
+                line-height: 28px;
+            }
+
+            &__txtlow {
+                margin-top: 17px;
+            }
+
+            &__df {
+                width: 280px;
+                height: 90px;
+                justify-content: center;
+                align-items: center;
+                margin: 16px auto 0;
+
+                &_input {
+                    width: 280px;
+                    height: 40px;
+                }
+
+                &_btn {
+                    width: 280px;
+                    height: 40px;
+                    margin-top: 9px;
+                }
+            }
+        }
+    }
+
+    .foot {
+        width: 100%;
+        margin: 40px auto 0;
+
+        &__block {
+            width: 320px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__df {
+                width: 320px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &__red {
+                    margin-top: 10px;
+                }
+
+                &__list {
+                    text-align: center;
+                    margin: 12px auto 0;
+
+                    &__bot {
+                        width: 280px;
+                        height: 50px;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        margin-top: 2px;
+                    }
+
+                    &__bot li {
+                        margin: 0 7px;
+                    }
+                }
+
+                &__solo {
+                    margin: 8px auto 0;
+                }
+
+            }
+
+            &__logo {
+                margin: 14px auto 0;
+
+                &__txt {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+}
