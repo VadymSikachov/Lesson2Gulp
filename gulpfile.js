@@ -1,10 +1,6 @@
 import pkg from 'gulp';
 const { src, dest, series, parallel, watch: _watch } = pkg;
-// import { src, dest, watch as _watch } from 'gulp';
-// import { series, parallel } from 'gulp';
 import pug from 'gulp-pug';
-// import sass from 'gulp-sass';
-// const sass = require('gulp-sass')(require('sass'));
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 const sass = gulpSass(dartSass);
@@ -16,6 +12,7 @@ import webp from 'gulp-webp';
 import browserSync from 'browser-sync';
 const browser = browserSync.create()
 import {deleteAsync}  from "del";
+import ghPages from 'gulp-gh-pages';
 
 const html = () => {
   return src('src/pug/*.pug')
@@ -59,3 +56,7 @@ const _default = series(
   parallel(watch, server)
 );
 export { _default as default };
+pkg.task('deploy', function() {
+  return pkg.src('./build/**/*')
+    .pipe(ghPages());
+});
